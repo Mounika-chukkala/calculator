@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width:1000px;
+    height:300px;
+    overflow: hidden;
+background-color: beige;
+}
+.background{
+    
+    display: flex;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.container{
+    margin:30px;
+    margin-top: 80px;
+    background-color: #221f1f;
+    border-radius: 20px;
+    height:70%;
+    width:20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position:absolute;
+}
+.container>p{
+    color:grey;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    position: absolute;
+    right:13px;
+    top:10px;
+}
+.screen{
+    width:90%;
+    height:15%;
+    margin:50px;
+    background-color :#2b442b;
+    margin-bottom:20px;
+    position:relative;
+}
+.buttons{
+    width:90%;
+    height:80%;
+    margin:0px;
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+.row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:8px;
+
+}
+.button{
+    width:40px;
+    height:40px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.ac ,.equal{
+    width:83px;
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+.blink{
+    border: 1px solid black;
+    height:30px;
+    width:0px;
+  animation: blink-caret 1s step-end infinite;
+  position:absolute;
+    right:13px;
+    top:12px;
+  z-index: 10;
+}
+.expression{
+    position: absolute;
+    right:0px;
+    top:9px;
+    z-index:10;
+    color:black;
+    margin-right:15px;
+    font-size:30px;
+    max-width:90%;
+    height:10vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width:1247px) and (max-height:800px) {
+    .container{
+        width: 243px;;
+    }
+}
+@media screen and (max-height:580px) {
+    .container{
+        height:370px;
+        width:270px;
+        margin:10px;
+    }
+}
+@media screen and (max-height:380px){
+    .container{
+        height:300px;
+        width:200px;
+    }
+    .button{
+        width: 30px;
+        height:25px;
+    }
+    .ac,.equal{
+        width:60px;
+    }
+    .screen{
+        height:50px;
+    }
+    .expression{
+        top:5px;
+    }
+    .blink{
+        height:25px;
+        top:8px;
+        right:15px;
+    }
+}
